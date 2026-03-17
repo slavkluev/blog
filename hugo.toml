@@ -1,0 +1,76 @@
+baseURL = "https://blowfish.kliuev.dev/"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "Viacheslav Kliuev"
+
+enableRobotsTXT = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[pagination]
+  pagerSize = 10
+
+[module]
+  [[module.imports]]
+    path = "github.com/nunocoracao/blowfish/v2"
+
+[languages.en]
+  languageName = "English"
+  weight = 1
+
+  [languages.en.params]
+    author.name = "Viacheslav Kliuev"
+    author.headline = "Software Engineer"
+    author.image = "img/author.svg"
+    author.bio = "Building with Go. Writing about backend, infrastructure, and side projects."
+    author.links = [
+      { github = "https://github.com/slavkluev" },
+      { email = "mailto:hi@kliuev.dev" },
+    ]
+
+[[languages.en.menus.main]]
+  name = "Blog"
+  pageRef = "blog"
+  weight = 10
+
+[[languages.en.menus.main]]
+  name = "Projects"
+  pageRef = "projects"
+  weight = 20
+
+
+[params]
+  colorScheme = "blowfish"
+  defaultAppearance = "dark"
+  autoSwitchAppearance = true
+
+  enableSearch = true
+  enableCodeCopy = true
+
+  [params.homepage]
+    layout = "profile"
+    showRecent = false
+
+  [params.article]
+    showDate = true
+    showReadingTime = true
+    showTableOfContents = true
+
+  [params.footer]
+    showThemeAttribution = false
+
+  [params.list]
+    showCards = false
+    groupByYear = true
+
+[permalinks]
+  [permalinks.page]
+    blog = "/blog/:slug/"
+
+[markup.highlight]
+  noClasses = false
+  lineNos = true
+
+[markup.goldmark.renderer]
+  unsafe = true
