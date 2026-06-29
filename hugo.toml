@@ -1,5 +1,5 @@
 baseURL = "https://kliuev.dev/"
-languageCode = "en"
+locale = "en"
 defaultContentLanguage = "en"
 title = "Viacheslav Kliuev"
 
@@ -16,7 +16,7 @@ enableRobotsTXT = true
     path = "github.com/nunocoracao/blowfish/v2"
 
 [languages.en]
-  languageName = "English"
+  label = "English"
   weight = 1
 
   [languages.en.params]
