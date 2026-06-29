@@ -21,12 +21,20 @@ jobs:
 
       - uses: actions/setup-go@v5
         with:
-          go-version: stable
+          go-version-file: go.mod
 
       - uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 0.161.1
           extended: true
+
+      - name: Cache Hugo modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
 
       - run: hugo --minify
 
