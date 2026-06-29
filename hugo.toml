@@ -1,7 +1,6 @@
 baseURL = "https://kliuev.dev/"
 locale = "en"
 defaultContentLanguage = "en"
-title = "Viacheslav Kliuev"
 
 enableRobotsTXT = true
 
@@ -17,9 +16,11 @@ enableRobotsTXT = true
 
 [languages.en]
   label = "English"
+  title = "Viacheslav Kliuev"
   weight = 1
 
   [languages.en.params]
+    displayName = "EN"
     description = "Software engineer building with Go. Writing about backend, infrastructure, and side projects."
     author.name = "Viacheslav Kliuev"
     author.headline = "Software Engineer"
@@ -37,6 +38,33 @@ enableRobotsTXT = true
 
 [[languages.en.menus.main]]
   name = "Projects"
+  pageRef = "projects"
+  weight = 20
+
+[languages.ru]
+  label = "Русский"
+  title = "Вячеслав Клюев"
+  weight = 2
+
+  [languages.ru.params]
+    displayName = "RU"
+    description = "Software Engineer, пишу на Go. Рассказываю о бэкенде, инфраструктуре и пет-проектах."
+    author.name = "Вячеслав Клюев"
+    author.headline = "Software Engineer"
+    author.image = "img/author.svg"
+    author.bio = "Пишу на Go. Рассказываю о бэкенде, инфраструктуре и пет-проектах."
+    author.links = [
+      { github = "https://github.com/slavkluev" },
+      { email = "mailto:hi@kliuev.dev" },
+    ]
+
+[[languages.ru.menus.main]]
+  name = "Блог"
+  pageRef = "blog"
+  weight = 10
+
+[[languages.ru.menus.main]]
+  name = "Проекты"
   pageRef = "projects"
   weight = 20
 
