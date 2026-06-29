@@ -20,6 +20,7 @@ enableRobotsTXT = true
   weight = 1
 
   [languages.en.params]
+    description = "Software engineer building with Go. Writing about backend, infrastructure, and side projects."
     author.name = "Viacheslav Kliuev"
     author.headline = "Software Engineer"
     author.image = "img/author.svg"
