@@ -71,7 +71,7 @@ enableRobotsTXT = true
 
 [params]
   colorScheme = "blowfish"
-  defaultAppearance = "dark"
+  defaultAppearance = "light"
   autoSwitchAppearance = true
 
   enableSearch = true
